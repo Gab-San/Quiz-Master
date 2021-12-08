@@ -306,8 +306,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Filomena non \xE8 una donna amaena"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 30e614e4b2b28924786ef3c4cc925f23, type: 2}
+  m_sharedMaterial: {fileID: -8252055603588894490, guid: 30e614e4b2b28924786ef3c4cc925f23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515175233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb61c7add225cc44917fec0d910740e, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1515175235

@@ -8,7 +8,7 @@ public class Quiz : MonoBehaviour
 {
 
     /*With this variable the script can acces the Question Scriptable Object*/
-    [SerializeField] QuestionSO question;
+    QuestionSO question;
 
     /*The next two variables are needed to set the question and the answer in the Start()*/
     [SerializeField] TextMeshProUGUI questionText;
