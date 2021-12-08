@@ -35,9 +35,14 @@ public class Quiz : MonoBehaviour
     Timer timer;
     [SerializeField] bool hasAnswered_inTime;
 
+    [Header("Section: Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
     void Start()
     {
-        timer = FindObjectOfType<Timer>();    
+        timer = FindObjectOfType<Timer>();  
+        scoreKeeper = FindObjectOfType<ScoreKeeper>(); 
     }
 
     void Update(){
@@ -66,6 +71,8 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
+
     }
 
     void DisplayAnswer(int index){
@@ -75,6 +82,7 @@ public class Quiz : MonoBehaviour
             questionText.text = "Corretto!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAnswers();
         } else {
             correctAnswer_index = currentQuestion.GetCorrectAnswerIndex();
             questionText.text = "Sbagliato! La risposta corretta è:\n\"" + currentQuestion.GetAnswer(correctAnswer_index) + "\"";
@@ -103,6 +111,7 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprite();
             GetRandomQuestion();
             DisplayQuestion();
+            scoreKeeper.IncrementQuestionsSeen();
         }
     }
 
