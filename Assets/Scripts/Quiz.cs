@@ -6,31 +6,66 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-
+    [Header("Section: Question")]
     /*With this variable the script can acces the Question Scriptable Object*/
     [SerializeField] QuestionSO question;
 
     /*The next two variables are needed to set the question and the answer in the Start()*/
     [SerializeField] TextMeshProUGUI questionText;
-    [SerializeField] GameObject[] answerButtons;
 
+    [Header("Section: Answers")]
+    [SerializeField] GameObject[] answerButtons;
     int correctAnswer_index;
 
-    /*These two variables control which sprite to show with buttons interaction*/
 
+    /*These two variables control which sprite to show with buttons interaction*/
+    [Header("Section: Button Colors")]
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
 
 
+    /*Accessing Timer Components*/
+    [Header("Section: Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
+    [SerializeField] bool hasAnswered_inTime;
 
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         GetNextQuestion();
         //DisplayQuestion();    
     }
 
+    void Update(){
+        ChangeFillAmount();
+        /*If timeToShowAnswer has finished*/
+        if(timer.loadNextQuestion){
+            hasAnswered_inTime = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        } 
+        /*If Player didn't answer in time*/
+        else if( !hasAnswered_inTime && !timer.GetAnsweringQuestionBool() ){
+            DisplayAnswer(-1);
+            SetButtonState(false);
+        }
+    }
+
+    /*Changes Graphical FillAmount of the Timer Image*/
+    void ChangeFillAmount(){
+        timerImage.fillAmount = timer.fillFraction;
+    }
+
     public void OnAnswerSelected(int index){
 
+        hasAnswered_inTime = true;
+        DisplayAnswer(index);
+        SetButtonState(false);
+        timer.CancelTimer();
+    }
+
+    void DisplayAnswer(int index){
         Image buttonImage;
 
         if( index == question.GetCorrectAnswerIndex() ){
@@ -43,8 +78,6 @@ public class Quiz : MonoBehaviour
             buttonImage = answerButtons[correctAnswer_index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
-
-        SetButtonState(false);
     }
 
     /*Sets Up Question and Answers in GUI*/
@@ -84,4 +117,6 @@ public class Quiz : MonoBehaviour
             buttonImage.sprite = defaultAnswerSprite;
         }
     }
+
+
 }
