@@ -247,6 +247,7 @@ MonoBehaviour:
   - {fileID: 1796852605}
   defaultAnswerSprite: {fileID: 21300000, guid: aa8743c8b4006684199d79a3de3a1db8, type: 3}
   correctAnswerSprite: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
+  timerImage: {fileID: 795843084}
 --- !u!1 &146435342
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 6812353903142434297, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa8743c8b4006684199d79a3de3a1db8, type: 3}
+      objectReference: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
     - target: {fileID: 6812353903142434298, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -686,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnswerButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6812353903142434297, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
     - target: {fileID: 6812353903142434298, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -835,7 +840,7 @@ PrefabInstance:
     - target: {fileID: 6812353903142434297, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa8743c8b4006684199d79a3de3a1db8, type: 3}
+      objectReference: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
     - target: {fileID: 6812353903142434298, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -1224,6 +1229,10 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToCompleteQuestion: 15
+  timeToShowCorrectAnswer: 5
+  loadNextQuestion: 0
+  fillFraction: 0
 --- !u!4 &1515175235
 Transform:
   m_ObjectHideFlags: 0
@@ -1506,6 +1515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnswerButton (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 6812353903142434297, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
     - target: {fileID: 6812353903142434298, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_Interactable
       value: 0
