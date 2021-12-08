@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 72ebc32ca2a18e349b236845f098beec
+guid: ea69f6d17a206cf46bcf9799b85ba865
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,12 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Merriweather
+  - Quicksand
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 42b3c431ff45e014bba1276155513a58, type: 3}
-  - {fileID: 12800000, guid: f138b0e3eff01b947bc8785ac7b9b021, type: 3}
+  - {fileID: 12800000, guid: f1785889e168943458bb5e5b43986bc8, type: 3}
+  - {fileID: 12800000, guid: 44eda504cdd791842932833711e79f00, type: 3}
+  - {fileID: 12800000, guid: c129bac701dacf540aa136186e9a13e4, type: 3}
+  - {fileID: 12800000, guid: 06cf009a3489ba5468a5b8e35b9cb851, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
