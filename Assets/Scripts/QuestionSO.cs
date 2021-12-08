@@ -31,6 +31,7 @@ public class QuestionSO : ScriptableObject
     }
 
     public int GetNumberofAnswers(){
+        Debug.Log(answers.Length);
         return answers.Length;
     }
 }

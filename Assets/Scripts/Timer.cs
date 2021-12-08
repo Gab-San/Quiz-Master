@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
     void UpdateTimer(){
 
         timerValue -= Time.deltaTime;
-        Debug.Log(timerValue);
+//        Debug.Log(timerValue);
 
         if(isAnsweringQuestion){
             if(timerValue > 0){
