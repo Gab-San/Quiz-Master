@@ -8,6 +8,10 @@ using UnityEngine;
 public class QuestionSO : ScriptableObject
 {
 
+    /*The variables set are:
+        -The Question
+        -The Possible Answers
+        -And the index of the correct answer*/
     [TextArea(2,6)][SerializeField] string question = "Enter new question text here";
 
     [TextArea(1,2)][SerializeField] string[] answers = new string[4];
