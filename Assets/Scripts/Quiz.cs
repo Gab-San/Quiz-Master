@@ -43,12 +43,13 @@ public class Quiz : MonoBehaviour
     [SerializeField] Slider progressBar;
     public bool quizIsCompleted;
 
-    void Start()
+    void Awake()
     {
         timer = FindObjectOfType<Timer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         progressBar.maxValue = questions.Count;
         progressBar.value = 0;
+        hasAnswered_inTime = true;
     }
 
     private void AllButtonsSetDisactive()
@@ -66,6 +67,9 @@ public class Quiz : MonoBehaviour
             hasAnswered_inTime = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
+            if(progressBar.value == progressBar.maxValue){
+                quizIsCompleted = true;
+            }
         } 
         /*If Player didn't answer in time*/
         else if( !hasAnswered_inTime && !timer.GetAnsweringQuestionBool() ){
@@ -86,10 +90,6 @@ public class Quiz : MonoBehaviour
         SetButtonState(false);
         timer.CancelTimer();
         scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
-
-        if(progressBar.value == progressBar.maxValue){
-            quizIsCompleted = true;
-        }
 
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
 
+    Quiz quizScript;
+
     /*Timer variables*/
     [SerializeField] float timeToCompleteQuestion = 30f;
     [SerializeField] float timeToShowCorrectAnswer = 10f;
@@ -18,9 +20,17 @@ public class Timer : MonoBehaviour
     public float fillFraction;
 
 
+
+    void Awake(){
+        quizScript = FindObjectOfType<Quiz>();
+    }
+
+
     void Update()
     {
-        UpdateTimer();
+        if(!quizScript.quizIsCompleted){
+            UpdateTimer();
+        }
     }
 
     public void CancelTimer(){
