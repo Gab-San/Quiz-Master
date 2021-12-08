@@ -29,4 +29,8 @@ public class QuestionSO : ScriptableObject
     public int GetCorrectAnswerIndex(){
         return correctAnswerIndex;
     }
+
+    public int GetNumberofAnswers(){
+        return answers.Length;
+    }
 }

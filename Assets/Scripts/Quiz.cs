@@ -88,8 +88,9 @@ public class Quiz : MonoBehaviour
 
         questionText.text = currentQuestion.GetQuestion();
 
-        for (int i = 0; i < answerButtons.Length; i++){
+        for (int i = 0; i < currentQuestion.GetNumberofAnswers(); i++){
 
+            answerButtons[i].SetActive(true);
             TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = currentQuestion.GetAnswer(i);
         }
