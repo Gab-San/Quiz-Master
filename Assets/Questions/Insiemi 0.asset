@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi (3)
+  m_Name: Insiemi 0
   m_EditorClassIdentifier: 
-  question: In che modo sono rappresentabili gli insiemi?
+  question: "Cos\u2019\xE8 un insieme?"
   answers:
-  - "Per elencazione e propriet\xE0 caratteristiche "
-  - "Per elencazione e per rappresentazione grafica\t"
-  - "Per tabulazione, propriet\xE0 caratteristiche e rappresentaione grafica"
-  - "Per rappresentazione grafica e propriet\xE0 caratteristiche"
-  correctAnswerIndex: 2
+  - Una collezione di oggetti
+  - "\xC8 una nozione primitiva"
+  - 
+  - 
+  correctAnswerIndex: 1

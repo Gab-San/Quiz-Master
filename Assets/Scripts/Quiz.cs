@@ -7,13 +7,18 @@ using UnityEngine.UI;
 public class Quiz : MonoBehaviour
 {
     [Header("Section: Question")]
-    /*With this variable the script can acces the Question Scriptable Object*/
-    QuestionSO question;
-
-    /*The next two variables are needed to set the question and the answer in the Start()*/
+    /*The next variable is needed to set the question at runtime*/
     [SerializeField] TextMeshProUGUI questionText;
 
+    /*With this variable the script can acces the Question Scriptable Object*/
+    [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
+    QuestionSO currentQuestion;
+    
+
+
+
     [Header("Section: Answers")]
+    /*The next variable is needed to set the answers at runtime*/
     [SerializeField] GameObject[] answerButtons;
     int correctAnswer_index;
 
@@ -32,9 +37,7 @@ public class Quiz : MonoBehaviour
 
     void Start()
     {
-        timer = FindObjectOfType<Timer>();
-        GetNextQuestion();
-        //DisplayQuestion();    
+        timer = FindObjectOfType<Timer>();    
     }
 
     void Update(){
@@ -68,13 +71,13 @@ public class Quiz : MonoBehaviour
     void DisplayAnswer(int index){
         Image buttonImage;
 
-        if( index == question.GetCorrectAnswerIndex() ){
+        if( index == currentQuestion.GetCorrectAnswerIndex() ){
             questionText.text = "Corretto!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         } else {
-            correctAnswer_index = question.GetCorrectAnswerIndex();
-            questionText.text = "Sbagliato! La risposta corretta è:\n\"" + question.GetAnswer(correctAnswer_index) + "\"";
+            correctAnswer_index = currentQuestion.GetCorrectAnswerIndex();
+            questionText.text = "Sbagliato! La risposta corretta è:\n\"" + currentQuestion.GetAnswer(correctAnswer_index) + "\"";
             buttonImage = answerButtons[correctAnswer_index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
@@ -83,21 +86,34 @@ public class Quiz : MonoBehaviour
     /*Sets Up Question and Answers in GUI*/
     void DisplayQuestion(){
 
-        questionText.text = question.GetQuestion();
+        questionText.text = currentQuestion.GetQuestion();
 
         for (int i = 0; i < answerButtons.Length; i++){
 
             TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = question.GetAnswer(i);
+            buttonText.text = currentQuestion.GetAnswer(i);
         }
 
     }
 
     /*This method is untested*/
     void GetNextQuestion(){
-        SetButtonState(true);
-        SetDefaultButtonSprite();
-        DisplayQuestion();
+        if (questions.Count > 0){
+            SetButtonState(true);
+            SetDefaultButtonSprite();
+            GetRandomQuestion();
+            DisplayQuestion();
+        }
+    }
+
+    void GetRandomQuestion(){
+        int index = Random.Range(0, questions.Count);
+        currentQuestion = questions[index];
+
+        /*Checking that the currentQuestion exists*/
+        if (questions.Contains(currentQuestion)){
+            questions.Remove(currentQuestion);
+        }
     }
 
     /*Sets Button State*/

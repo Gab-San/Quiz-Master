@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi (0)
+  m_Name: Insiemi 2
   m_EditorClassIdentifier: 
-  question: "Cos\u2019\xE8 un insieme?"
+  question: "Com\u2019\xE8 definito il simbolo di appartenenza?"
   answers:
-  - Una collezione di oggetti
-  - "\xC8 una nozione primitiva"
-  - 
-  - 
-  correctAnswerIndex: 1
+  - "\u0394"
+  - "\u2209"
+  - "\u2286"
+  - "\u2208"
+  correctAnswerIndex: 3

@@ -238,8 +238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7b96202f5547041a265b7d9b5251ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 11400000, guid: 95dbfa9bb26073a4fb7343172329ddd2, type: 2}
   questionText: {fileID: 146435344}
+  questions:
+  - {fileID: 11400000, guid: 9100744b3986835468bb428c8c521d97, type: 2}
+  - {fileID: 11400000, guid: a0fc63998d3ffb942947350249560bf3, type: 2}
+  - {fileID: 11400000, guid: f1b53dfa192fcf24abbffc0da07ee475, type: 2}
+  - {fileID: 11400000, guid: ea3f6b7871c5ac84098ff16f9fe4bb88, type: 2}
+  - {fileID: 11400000, guid: c7364115e323b134d8f90d357ba0ab5b, type: 2}
   answerButtons:
   - {fileID: 678985280}
   - {fileID: 1484117881}
@@ -248,6 +253,7 @@ MonoBehaviour:
   defaultAnswerSprite: {fileID: 21300000, guid: aa8743c8b4006684199d79a3de3a1db8, type: 3}
   correctAnswerSprite: {fileID: 21300000, guid: e033c15a45283b24f9ea3a59f921e051, type: 3}
   timerImage: {fileID: 795843084}
+  hasAnswered_inTime: 0
 --- !u!1 &146435342
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,11 +525,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSizeMax
-      value: 50
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
@@ -813,11 +823,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSizeMax
-      value: 50
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
@@ -963,11 +977,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSizeMax
-      value: 50
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
@@ -1105,8 +1123,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: QUIZ MASTER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: da0e554edf2dff645ba0742d8d1b9b5b, type: 2}
+  m_sharedMaterial: {fileID: -3920145647022378428, guid: da0e554edf2dff645ba0742d8d1b9b5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1130,7 +1148,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 116.45
+  m_fontSize: 145.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1226,11 +1244,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515175233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dbb61c7add225cc44917fec0d910740e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToCompleteQuestion: 15
   timeToShowCorrectAnswer: 5
+  isAnsweringQuestion: 0
   loadNextQuestion: 0
   fillFraction: 0
 --- !u!4 &1515175235
@@ -1476,7 +1495,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 1200, y: 500}
+  m_SizeDelta: {x: 1500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997370300
 MonoBehaviour:
@@ -1637,11 +1656,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
       propertyPath: m_fontSizeMax
-      value: 50
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812353904041728589, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c4be8216ea4a047a217d93b92791b6, type: 3}
