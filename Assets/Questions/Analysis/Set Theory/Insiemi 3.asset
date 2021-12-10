@@ -16,7 +16,7 @@ MonoBehaviour:
   answers:
   - "Per elencazione e propriet\xE0 caratteristiche "
   - "Per elencazione e per rappresentazione grafica\t"
-  - "Per tabulazione, propriet\xE0 caratteristiche e rappresentaione grafica"
+  - "Per tabulazione, propriet\xE0 caratteristiche e rappresentazione grafica"
   correctAnswerIndex: 2
   correctAnswerText: "Per tabulazione (o elencazione), propriet\xE0 caratteristiche
     e rappresentaione grafica."
