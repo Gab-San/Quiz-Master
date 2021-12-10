@@ -84,13 +84,15 @@ public class Quiz : MonoBehaviour
     }
 
     public void OnAnswerSelected(int index){
-
-        hasAnswered_inTime = true;
-        DisplayAnswer(index);
-        SetButtonState(false);
-        timer.CancelTimer();
-        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
-
+        if (index < 0 && index > currentQuestion.GetNumberofAnswers() ){
+            Debug.Log("Correct Answer Index is out of range!!");
+        } else {
+            hasAnswered_inTime = true;
+            DisplayAnswer(index);
+            SetButtonState(false);
+            timer.CancelTimer();
+            scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
+        }
     }
 
     void DisplayAnswer(int index){
@@ -103,7 +105,7 @@ public class Quiz : MonoBehaviour
             scoreKeeper.IncrementCorrectAnswers();
         } else {
             correctAnswer_index = currentQuestion.GetCorrectAnswerIndex();
-            questionText.text = "Sbagliato! La risposta corretta è:\n\"" + currentQuestion.GetAnswer(correctAnswer_index) + "\"";
+            questionText.text = "Sbagliato! La risposta corretta è:\n\"" + currentQuestion.GetCorrectAnswer() + "\"";
             buttonImage = answerButtons[correctAnswer_index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
@@ -115,7 +117,6 @@ public class Quiz : MonoBehaviour
         questionText.text = currentQuestion.GetQuestion();
 
         for (int i = 0; i < currentQuestion.GetNumberofAnswers(); i++){
-
             answerButtons[i].SetActive(true);
             TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = currentQuestion.GetAnswer(i);

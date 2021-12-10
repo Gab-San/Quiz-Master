@@ -18,12 +18,18 @@ public class QuestionSO : ScriptableObject
 
     [SerializeField] int correctAnswerIndex;
 
+    [TextArea(2,4)][SerializeField] string correctAnswerText;
+
     public string GetQuestion(){
         return question;
     }
 
     public string GetAnswer(int index){
         return answers[index];
+    }
+
+    public string GetCorrectAnswer(){
+        return correctAnswerText;
     }
     
     public int GetCorrectAnswerIndex(){
