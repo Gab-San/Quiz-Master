@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi 3
+  m_Name: Insiemi 6
   m_EditorClassIdentifier: 
-  question: In che modo sono rappresentabili gli insiemi?
+  question: "Quali sono le propriet\xE0 delle operazioni di Unione e Inclusione?"
   answers:
-  - "Per elencazione e propriet\xE0 caratteristiche "
-  - "Per elencazione e per rappresentazione grafica\t"
-  - "Per tabulazione, propriet\xE0 caratteristiche e rappresentaione grafica"
+  - Involutoria e Leggi di De Morgan
+  - Transitiva, Associativa, Distributiva, Di inclusione
+  - Idempotenza, Commutativa, Associativa, Distributiva
+  - Commutativa, Associativa, Distributiva
   correctAnswerIndex: 2
-  correctAnswerText: "Per tabulazione (o elencazione), propriet\xE0 caratteristiche
-    e rappresentaione grafica."
+  correctAnswerText: Transitiva, Associativa, Distributiva, Di inclusione (e non
+    sono nemmeno tutte!)

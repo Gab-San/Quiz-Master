@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi 0
+  m_Name: Insiemi 7
   m_EditorClassIdentifier: 
-  question: "Cos\u2019\xE8 un insieme?"
+  question: "Cos'\xE8 una formula ben formata?"
   answers:
-  - Una collezione di oggetti
-  - "\xC8 una nozione primitiva"
+  - "\xC8 una sequenza di soli simboli che formano un'espressione di senso compiuto"
+  - "\xC8 una sequenza di parole e simboli che rispettano una certa sintassi"
   correctAnswerIndex: 1
-  correctAnswerText: "\xC8 una nozione primitiva, non \xE8 riducibile a concetti
-    pi\xF9 elementari."
+  correctAnswerText: "\xC8 importante sottolineare che sia una sequenza di parole
+    e simboli allo stesso tempo, non solo uno o l'altro."

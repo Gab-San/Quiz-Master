@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
   m_Name: Insiemi 1
   m_EditorClassIdentifier: 
-  question: "Cos\u2019\xE8 un elemento?"
+  question: "Quali sono le propriet\xE0 della relazione di inclusione?"
   answers:
-  - "\xC8 un insieme pi\xF9 piccolo"
-  - "\xC8 un oggetto associato all'insieme"
-  - "\xC8 un oggetto che fa parte di un insieme"
-  - "\xC8 un concetto primitivo"
-  correctAnswerIndex: 2
+  - Riflessiva, Antisimmetrica, Transitiva
+  - Riflessiva, Transitiva, Commutativa
+  - Riflessiva, Associativa, Commutativa
+  - Transitiva, Associativa, Commutativa
+  correctAnswerIndex: 0
+  correctAnswerText: Riflessiva, Associativa, Commutativa.

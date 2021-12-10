@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
   m_Name: Insiemi 2
   m_EditorClassIdentifier: 
-  question: "Com\u2019\xE8 definito il simbolo di appartenenza?"
+  question: "Cos'\xE8 un elemento?"
   answers:
-  - "\u0394"
-  - "\u2209"
-  - "\u2286"
-  - "\u2208"
+  - "\xC8 una nozione primitiva"
+  - "\xC8 un oggetto associato a un insieme"
+  - "\xC8 un insieme pi\xF9 piccolo"
+  - "\xC8 un oggetto che fa parte di un insieme"
   correctAnswerIndex: 3
+  correctAnswerText: "\xC8 un oggetto che fa parte di un insieme."

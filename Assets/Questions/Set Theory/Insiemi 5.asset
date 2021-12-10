@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi 0
+  m_Name: Insiemi 5
   m_EditorClassIdentifier: 
-  question: "Cos\u2019\xE8 un insieme?"
+  question: Quali sono le operazioni tra insiemi?
   answers:
-  - Una collezione di oggetti
-  - "\xC8 una nozione primitiva"
-  correctAnswerIndex: 1
-  correctAnswerText: "\xC8 una nozione primitiva, non \xE8 riducibile a concetti
-    pi\xF9 elementari."
+  - Unione, Intersezione, Differenza, Complementazione
+  - Unione, Intersezione, Differenza
+  - Unione, Intersezione, Inclusione
+  - Addizione, Sottrazione, Moltiplicazione, Divisione
+  correctAnswerIndex: 0
+  correctAnswerText: Unione, Intersezione, Differenza, Complementazione
