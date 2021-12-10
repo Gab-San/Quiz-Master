@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Endomorfismi 0
+  m_Name: Endomorfismi 2
   m_EditorClassIdentifier: 
-  question: "Cos'\xE8 un endomorfismo?"
+  question: "Data una matrice A (NxN); il polinomio caratteristico di A \xE8:"
   answers:
-  - "\xC8 un'applicazione lineare L: V --> V"
-  - "\xC8 un'applicazione lineare iniettiva e suriettiva"
-  - "\xC8 un'applicazione lineare simmetrica"
+  - "\u03C7(x) = det( - x * In + A )"
+  - "\u03C7(x)  = det( x * In - A)"
+  - "\u03C7(x)  = det( A + x * In )"
   correctAnswerIndex: 0
-  correctAnswerText: "\xC8 un'applicazione lineare L: V --> V"
+  correctAnswerText: "\u03C7(x) = det( - x * In + A ) = det( A - x * In)"

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Endomorfismi 0
+  m_Name: Endomorfismi 1
   m_EditorClassIdentifier: 
-  question: "Cos'\xE8 un endomorfismo?"
+  question: "Dato un numero \u03BB e un vettore diverso da 0 tali che L(v) = \u03BBv:"
   answers:
-  - "\xC8 un'applicazione lineare L: V --> V"
-  - "\xC8 un'applicazione lineare iniettiva e suriettiva"
-  - "\xC8 un'applicazione lineare simmetrica"
-  correctAnswerIndex: 0
-  correctAnswerText: "\xC8 un'applicazione lineare L: V --> V"
+  - "\u03BB si dice autovettore e v autovalore"
+  - "\u03BB si dice autovalore e v autovettore"
+  - "\u03BB si dice coefficiente e v vettore incognita"
+  correctAnswerIndex: 1
+  correctAnswerText: "\u03BB si dice autovalore e v autovettore"
