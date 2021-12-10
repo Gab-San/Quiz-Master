@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
-  m_Name: Insiemi 8
+  m_Name: Logica 1
   m_EditorClassIdentifier: 
   question: "Cos'\xE8 una proposizione?"
   answers:
-  - "\xC8 una formula ben formata che non contiene variabilil libere e a cui si pu\xF2
-    attribuire valore vero o falso."
+  - "\xC8 una formula ben formata che non contiene \nvariabilil libere e a cui si
+    pu\xF2 attribuire valore vero o falso."
   - "\xC8 un'espressione il cui valore di verit\xE0 dipende da variabili"
   correctAnswerIndex: 0
   correctAnswerText: "\xC8 una formula ben formata che non contiene variabilil libere
