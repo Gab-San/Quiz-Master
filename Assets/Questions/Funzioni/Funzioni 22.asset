@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
+  m_Name: Funzioni 22
+  m_EditorClassIdentifier: 
+  question: In soldoni, cosa afferma il teorema dei valori intermedi?
+  answers:
+  - "Se una funzione f \xE8 definita su [a,b], \nessa assume massimo e minimo in
+    [a,b]"
+  - "Se una funzione f \xE8 continua e definita su un intervallo [a,b],\nessa assume
+    tutti i valori compresi tra max e min"
+  - "Se una funzione f \xE8 definita e non continua su intervallo,\nessa assume tutti
+    i valori compresi tra max e min"
+  - Una funzione f assume massimo e minimo in un intervallo
+  correctAnswerIndex: 1
+  correctAnswerText: "Se una funzione f \xE8 continua e definita su un intervallo
+    [a,b], essa assume tutti i valori compresi tra max e min"

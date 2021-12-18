@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Dati due insiemi A e B, cos'\xE8 una funzione?"
   answers:
-  - Una relazione che ad ogni elemento x appartenente ad A fa corrispondere univocamente
-    un y appartenente a B
+  - 'Una relazione che ad ogni elemento x appartenente ad A
+
+    fa corrispondere
+    univocamente un y appartenente a B'
   - Un'associazione tra elementi dei due insiemi
   - Una relazione che associa a ciascun elemento di B un elemento di A
-  - Una relazione che associa univocamente ad alcuni elementi di A, un elemento di
-    B
+  - "Una relazione che associa univocamente ad \nalcuni elementi di A, un elemento
+    di B"
   correctAnswerIndex: 0
-  correctAnswerText: 
+  correctAnswerText: Una relazione che ad ogni elemento x appartenente ad A fa corrispondere
+    univocamente un y appartenente a B
