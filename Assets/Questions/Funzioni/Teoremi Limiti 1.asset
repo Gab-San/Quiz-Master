@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
+  m_Name: Teoremi Limiti 1
+  m_EditorClassIdentifier: 
+  question: "Se il limite di f(x) \xE8 0 per x --> c e g(x) \xE8 limitata definitivamente
+    per x --> c, allora"
+  answers:
+  - Esiste il limite di f(x)g(x) per x --> c
+  - "Non si pu\xF2 dire niente"
+  - "Esiste il limite di f(x)g(x) per x --> c ed \xE8 uguale a 0"
+  - "Esiste il limite di f(x)g(x) per x --> c ed \xE8 uguale a inf"
+  correctAnswerIndex: 2
+  correctAnswerText: "Esiste il limite di f(x)g(x) per x --> c ed \xE8 uguale a 0"

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad394b2c63fa0494aa5a928a45db6753, type: 3}
+  m_Name: Funzioni 8
+  m_EditorClassIdentifier: 
+  question: "Cosa dice il Teorema di mon\xF2tonia e invertibilit\xE0?"
+  answers:
+  - "Se f \xE8 strettamente monot\xF2na in A, allora essa \xE8 invertibile e l'inversa
+    \xE8 inversamente monot\xF2na "
+  - "Se f \xE8 strettamente monot\xF2na in A, allora essa \xE8 iniettiva e l'inversa
+    \xE8 monot\xF2na allo stesso modo di f"
+  - "Se f \xE8 monot\xF2na in A, allora essa \xE8 invertibile"
+  correctAnswerIndex: 1
+  correctAnswerText: "Se f \xE8 strettamente monot\xF2na in A, allora essa e iniettiva
+    e l'inversa \xE8 monot\xF2na allo stesso modo di f"
