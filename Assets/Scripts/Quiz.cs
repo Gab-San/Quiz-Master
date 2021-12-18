@@ -13,8 +13,7 @@ public class Quiz : MonoBehaviour
     /*With this variable the script can acces the Question Scriptable Object*/
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     QuestionSO currentQuestion;
-    
-
+    [SerializeField] int n_ofQuestions = 20;
 
 
     [Header("Section: Answers")]
@@ -47,7 +46,7 @@ public class Quiz : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
-        progressBar.maxValue = questions.Count;
+        progressBar.maxValue = n_ofQuestions;
         progressBar.value = 0;
         hasAnswered_inTime = true;
     }
